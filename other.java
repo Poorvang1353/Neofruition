@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class diamond {
+public class other {
     public static void main(String[] args) {
         int i, j, k, n;
         Scanner sc = new Scanner(System.in);
