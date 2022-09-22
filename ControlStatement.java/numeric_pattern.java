@@ -7,6 +7,7 @@ public class numeric_pattern {
         System.out.print("Enter the value of n: ");
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
+        
         // loop for upper left part
         for (i = 1; i <= n; i++) {
             for (j = 1; j <= n; j++) {
