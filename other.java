@@ -1,26 +1,16 @@
+import java.util.Arrays;
+
 public class other {
     public static void main(String[] args) {
-        int i, j, k, n;
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number of rows you want to print: ");
-        n = sc.nextInt();
-        for (i = n - 1; i >= 0; i--) {
-            for (j = 0; j < i; j++) {
-                System.out.print(" ");
-            }
-            for (k = i; k <= n - 1; k++) {
-                System.out.print("*" + " ");
-            }
-            System.out.println("");
-        }
-        for (i = 0; i <= n - 1; i++) {
-            for (j = 0; j < i + 1; j++) {
-                System.out.print(" ");
-            }
-            for (k = i; k <= n - 2; k++) {
-                System.out.print("*" + " ");
-            }
-            System.out.println("");
+        int size = 5;
+
+        for (int i = size - 1; i > 0; i--) {
+            char row[] = new char[2 * size - i - 1];
+            Arrays.fill(row, i, row.length, '*');
+            System.out.println(String.valueOf(row));
+
         }
     }
 }
+
+// Arrays.fill(row,0,i,' ');

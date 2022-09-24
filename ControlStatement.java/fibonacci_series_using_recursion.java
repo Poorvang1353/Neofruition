@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class fibonacci_series_using_recursion {
     static int n1 = 0, n2 = 1, n3 = 0;
 
@@ -12,8 +14,18 @@ public class fibonacci_series_using_recursion {
     }
 
     public static void main(String[] args) {
-        int count = 10;
-        System.out.print(n1 + " " + n2);
-        fibonacci(count - 2);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int count = sc.nextInt();
+        if (count < 1) {
+            System.out.println("Please enter positive number!");
+        } else if (count == 1) {
+            System.out.println(n1);
+        } else if (count == 2) {
+            System.out.print(n1 + " " + n2);
+        } else {
+            System.out.print(n1 + " " + n2);
+            fibonacci(count - 2);
+        }
     }
 }
