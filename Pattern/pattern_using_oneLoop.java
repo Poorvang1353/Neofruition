@@ -1,35 +1,24 @@
-import java.io.*;
 
 public class pattern_using_oneLoop {
 
-    // printPattern function to print pattern
     static void printPattern(int n) {
-        // Variable initialization
-        // Line count
-        int line_no = 1;
-
-        // Loop to print desired pattern
-        int curr_star = 0;
-        for (line_no = 1; line_no <= n;) {
-            // If current star count is less than
-            // current line number
-            if (curr_star < line_no) {
+        int a = 1;
+        int b = 0;
+        for (a = 1; a <= n;) {
+            if (b < a) {
                 System.out.print("* ");
-                curr_star++;
+                b++;
                 continue;
             }
-
-            // Else time to print a new line
-            if (curr_star == line_no) {
+            if (b == a) {
                 System.out.println("");
-                line_no++;
-                curr_star = 0;
+                a++;
+                b = 0;
             }
         }
     }
 
-    // Driver code
     public static void main(String[] args) {
-        printPattern(7);
+        printPattern(9);
     }
 }
