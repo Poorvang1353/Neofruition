@@ -17,7 +17,7 @@ public class pattern_using_oneLoop {
             }
         }
     }
-
+    
     public static void main(String[] args) {
         printPattern(9);
     }
