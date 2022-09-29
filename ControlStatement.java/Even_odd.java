@@ -11,5 +11,6 @@ public class Even_odd {
         else{
             System.out.println("The number is odd");
         }
+        sc.close();
     }
 }

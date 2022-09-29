@@ -20,6 +20,7 @@ public class rough {
           break;
         }
       }
+      sc.close();
     }
   }
 }

@@ -18,5 +18,8 @@ public class nested_if_else_2 {
         else{
             System.out.println("Age must be greater then 18");
         }
+        sc.close();
+
+
     }
 }

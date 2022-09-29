@@ -46,5 +46,7 @@ public class switch_statement_2 {
                 System.out.println("Invalid Month!!");
                 break;
         }
+        sc.close();
+
     }
 }

@@ -27,5 +27,6 @@ public class fibonacci_series_using_recursion {
             System.out.print(n1 + " " + n2);
             fibonacci(count - 2);
         }
+        sc.close();
     }
 }

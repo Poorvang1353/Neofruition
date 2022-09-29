@@ -28,5 +28,7 @@ public class switch_statement {
                 break;
         }
         System.out.println("Size: " + size);
+        sc.close();
+
     }
 }

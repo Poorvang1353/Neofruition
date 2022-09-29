@@ -41,6 +41,7 @@ public class Vowel_consonant_using_switch {
                 System.out.println("Consonant");
                 break;
         }
+        sc.close();
 
     }
 }

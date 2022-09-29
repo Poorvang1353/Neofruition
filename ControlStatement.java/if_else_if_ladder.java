@@ -1,7 +1,4 @@
-import java.rmi.StubNotFoundException;
 import java.util.Scanner;
-
-import javax.lang.model.util.ElementScanner14;
 
 public class if_else_if_ladder {
     public static void main(String[] args) {
@@ -26,5 +23,6 @@ public class if_else_if_ladder {
        else{
         System.out.println("Invalid input");
        }
+       sc.close();
     }
 }

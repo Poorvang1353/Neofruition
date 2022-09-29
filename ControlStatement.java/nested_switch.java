@@ -57,6 +57,8 @@ public class nested_switch {
                 break;
 
         }
+        sc.close();
+
 
     }
 }

@@ -23,5 +23,6 @@ public class fibonacci_series {
                 System.out.print(" " + n3);
             }
         }
+        sc.close();
     }
 }

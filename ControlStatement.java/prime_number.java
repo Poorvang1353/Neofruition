@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.xml.transform.Source;
-
 public class prime_number {
     public static void main(String[] args) {
         System.out.print("Enter any number: ");
@@ -20,6 +18,8 @@ public class prime_number {
         } else {
             System.out.println(n + " is not a prime number");
         }
+        sc.close();
+
 
     }
 

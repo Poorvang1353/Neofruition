@@ -17,5 +17,6 @@ public class factorial_using_recursion {
         int num = sc.nextInt();
         fact = factorial(num);
         System.out.print("Factorial is: " + fact);
+        sc.close();
     }
 }
