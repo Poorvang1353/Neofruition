@@ -2,25 +2,28 @@ import java.util.Scanner;
 
 public class rough {
   public static void main(String[] args) {
+    int n;
     Scanner sc = new Scanner(System.in);
-    System.out.println("Enter input: ");
-    int input = sc.nextInt();
-    int a = 50, n1 = 0, n2 = 1, n3 = 0;
-    if (input == 1) {
-      System.out.println("1");
-    } else {
+    System.out.println("Enter your number");
+    n = sc.nextInt();
 
-      for (int i = 2; i < a; i++) {
-        n3 = n1 + n2;
-        n1 = n2;
-        n2 = n3;
-
-        if (n3 >= input) {
-          System.out.println(n3);
-          break;
-        }
-      }
-      sc.close();
+    int num1 = 0, num2 = 1, num3 = 1, index = 1;
+                                                            //  num3=3,index=2,num1=2,num2=3
+    while (num3 < n) {
+      num3 = num1 + num2;
+      index++;
+      num1 = num2;
+      num2 = num3;
     }
+    num1 = 0;
+    num2 = 1;
+    num3 = 0;
+    for (int i = 2; i <= index; i++) {
+      num3 = num1 + num2;
+      num1 = num2;
+      num2 = num3;
+    }
+    System.out.println(num1);
+    sc.close();
   }
 }
