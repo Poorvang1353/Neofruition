@@ -1,5 +1,3 @@
-
-
 public class Arithmetic_example {
     public static void main(String[] args) {
         int x = 9, y = 12;

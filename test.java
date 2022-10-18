@@ -42,6 +42,7 @@ public class test {
         System.out.println("enter the number : ");
         result=foo.nextInt();
         findIndex(result); 
+        foo.close();
     } 
 } 
 
