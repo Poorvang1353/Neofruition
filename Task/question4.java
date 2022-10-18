@@ -2,7 +2,7 @@ class A {
     String name;
 
     A() {
-        this.name = name;
+        // this.name = name;
         System.out.println("no arg constructor " + " class of A");
     }
 
@@ -23,6 +23,6 @@ class B extends A {
 
 public class question4 {
     public static void main(String[] args) {
-        B b = new B("deeep");
+        new B("Poorvang");
     }
 }

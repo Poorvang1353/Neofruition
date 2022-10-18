@@ -24,11 +24,9 @@ class question1 {
       System.out.println(rollno + " " + name + " " + num);
    }
 
-
    public static void main(String[] args) {
       question1 s1 = new question1(20, "deep", 50);
       s1.display();
 
    }
 }
-

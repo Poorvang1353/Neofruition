@@ -17,7 +17,7 @@ class rikshaw extends car {
     }
 }
 
-class bus extends rikshaw{
+class bus extends rikshaw {
     void noofwheel() {
         System.out.println("this is bus");
     }
@@ -26,12 +26,12 @@ class bus extends rikshaw{
 
 class Testvehicle {
     public static void main(String[] args) {
-          bus v1= new bus();
-          v1.noofwheel();
-          rikshaw v2= new rikshaw();
-          v2.noofwheel();
-          car v3= new car();
-          v3.noofwheel();
-          
-        }
+        bus v1 = new bus();
+        v1.noofwheel();
+        rikshaw v2 = new rikshaw();
+        v2.noofwheel();
+        car v3 = new car();
+        v3.noofwheel();
+
     }
+}

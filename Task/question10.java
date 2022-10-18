@@ -3,27 +3,29 @@ class question10 {
     private String MNAME;
     private String MFG;
 
-    question10(int m, String n, String mfg) {
+    question10(int m) {
         this.MCODE = m;
+    }
+
+    question10(String n, String mfg) {
         this.MNAME = n;
         this.MFG = mfg;
     }
 
-    public question10() {
+    public int getCode() {
+        System.out.print("CODE :- ");
+        return MCODE;
     }
 
-    public void getname(int m, String n, String mfg) {
-        MCODE = m;
-        MNAME = n;
-        MFG = mfg;
-    }
-
-    public void getname() {
-        System.out.println(MCODE + " " + MNAME + " " + MFG);
+    public String getName() {
+        System.out.print("NAME :- " + MNAME + "\nManufacture by :- ");
+        return MFG;
     }
 
     public static void main(String[] args) {
-        question10 a1 = new question10(23, "Pooravng", "Satapara");
-        a1.getname();
+        question10 a1 = new question10(2301);
+        question10 a2 = new question10("Peracetamol", "Agsonpal Pharmaceuticals Ltd");
+        System.out.println(a1.getCode());
+        System.out.println(a2.getName());
     }
 }
