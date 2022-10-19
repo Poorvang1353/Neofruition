@@ -2,19 +2,19 @@ abstract class Bank {
     abstract float getRateOfInterest();
 }
 
-class SBI extends Bank {
+class Sbi extends Bank {
     float getRateOfInterest() {
         return 7.3f;
     }
 }
 
-class AXIS extends Bank {
+class Axis extends Bank {
     float getRateOfInterest() {
         return 8.7f;
     }
 }
 
-class HDFC extends Bank {
+class Hdfc extends Bank {
     float getRateOfInterest() {
         return 9.6f;
     }
@@ -23,11 +23,11 @@ class HDFC extends Bank {
 class question7 {
     public static void main(String args[]) {
         Bank b;
-        b = new SBI();
+        b = new Sbi();
         System.out.println("Rate of Interest is: " + b.getRateOfInterest() + " %");
-        b = new AXIS();
+        b = new Axis();
         System.out.println("Rate of Interest is: " + b.getRateOfInterest() + " %");
-        b = new HDFC();
+        b = new Hdfc();
         System.out.println("Rate of Interest is: " + b.getRateOfInterest() + " %");
     }
 }
