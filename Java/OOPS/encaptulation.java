@@ -10,7 +10,7 @@ class Person {
   
     // Setter
     public void setName(String newName) {
-      this.name = newName;
+      this.name = newName; 
     }
   }
 
@@ -21,3 +21,4 @@ class Person {
       System.out.println("Name: "+myObj.getName());
     }
   }
+  
