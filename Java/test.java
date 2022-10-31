@@ -21,7 +21,7 @@ public class test {
         findSum(res);
         return res;
     }
-
+    
     static int findSum(int n) {
         int m = n - 1;
         int a = 0, b = 1, c;
