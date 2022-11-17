@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color:blueviolet;
+        height: 3333px;
+        width: 443px;
+        margin: auto;
+        position: relative;
+    }
+    .box1{
+        background-color: blue;
+        height:100px;
+        width:150px;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        z-index: 2;
+    }
+    .box2{
+        background-color: blue;
+        height:120px;
+        width:150px;
+        position: absolute;
+        left: 250px;
+        top: 50px;
+        z-index: 7;
+    }
+    li{
+        display: inline-block;
+        padding: 5px;
+    }
+    header{
+        background-color: black;
+        color: aliceblue;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <header>
+            <ul>
+                <li>about us</li>
+                <li>contact us</li>
+                <li>gallery</li>
+            </ul>
+        </header>
+        <div class="box1">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptates nostrum at!
+
+              </p>
+        </div>
+        <div class="box2">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit nulla tempora nesciunt voluptates numquam.</p>
+        </div>
+    </div>
+</body>
+</html>

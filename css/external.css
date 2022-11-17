@@ -1,0 +1,15 @@
+body {
+    background-color:lightgreen;
+}
+.main {
+    text-align:center;   
+}
+.ABC {
+    color:violet;
+    font-size:100px;
+    font-weight:bold;
+}
+#ABD {
+    font-style:bold;
+    font-size:50px;
+}
