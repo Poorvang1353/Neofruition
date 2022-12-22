@@ -1,0 +1,148 @@
+#logo {
+  letter-spacing: 2px;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+#navbar a:hover,
+#navbar .active,
+#navbar .active:focus,
+#navbar li:hover>a {
+  color: #47b2e4;
+}
+
+#navbar a {
+  color: whitesmoke;
+}
+
+ #image{
+  width: 100%;
+ }
+
+
+@media (max-width: 991px) {
+  #navbar a {
+    color: black;
+  }
+
+  button {
+    color: black;
+  }
+
+  .navigation {
+    background-color: white;
+  }
+
+  #getstart {
+    margin-bottom: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+
+
+  }
+
+  #image{
+    width: 70%;
+   }
+}
+
+@media (max-width: 768px) {
+  #navbar a {
+    color: black;
+  }
+
+  button {
+    color: black;
+  }
+
+  .navigation {
+    background-color: white;
+  }
+
+  #getstart {
+    margin-bottom: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  
+}
+
+@media (max-width: 575px) {
+  #navbar a {
+    color: black;
+  }
+
+  button {
+    color: black;
+  }
+
+  .navigation {
+    background-color: white;
+  }
+
+  #getstart {
+    margin-bottom: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+
+  }
+
+  .hero {
+    text-align: center;
+    font-size: small;
+  }
+
+  #buttons {
+    justify-content: center;
+    size: 200px;
+  }
+}
+
+#text {
+  margin-top: 50px;
+}
+
+.hero h5 {
+  color: rgba(255, 255, 255, 0.6);
+
+}
+
+.hero p {
+  margin-top: 10px;
+}
+
+
+.hero .utube {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  margin: -11px 0 0 -5px;
+  color: #fff;
+  line-height: 1;
+}
+
+
+.utube:hover svg{
+  color: #47b2e4;
+  transition: 0.5s;
+}
+
+.clogo{
+  padding: 12px 0px;
+  text-align: center;
+}
+
+.clogo img{
+max-width: 45%;
+display: inline-block;
+transition: all 0.4s ease-in-out;
+filter: grayscale(100);
+padding: 15px 0;
+}
+
+.clogo img:hover{
+  filter: none;
+  transform: scale(1.1);
+}
