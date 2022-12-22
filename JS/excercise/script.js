@@ -46,6 +46,7 @@ function onEdit(td) {
     document.getElementById("mobileNo").value = selectedRow.cells[1].innerHTML;
     document.getElementById("emailId").value = selectedRow.cells[2].innerHTML;
 }
+
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.Name;
     selectedRow.cells[1].innerHTML = formData.mobileNo;
@@ -59,6 +60,7 @@ function onDelete(td) {
         resetForm();
     }
 }
+
 function validate() {
     isValid = true;
     if (document.getElementById("Name").value == "") {
