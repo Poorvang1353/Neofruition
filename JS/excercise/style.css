@@ -9,7 +9,7 @@ td, th {
 }
 
 
-input[type=text], input[type=number] {
+input[type=text], input[type=number], input[type=email] {
     padding: 12px 20px;
     margin: 8px 0;
 }
