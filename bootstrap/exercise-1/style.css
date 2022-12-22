@@ -16,10 +16,9 @@
   color: whitesmoke;
 }
 
- #image{
+img {
   width: 100%;
- }
-
+}
 
 @media (max-width: 991px) {
   #navbar a {
@@ -38,13 +37,22 @@
     margin-bottom: 10px;
     margin-left: 4px;
     margin-right: 4px;
-
-
   }
 
-  #image{
+  .hero {
+    text-align: center;
+    font-size: small;
+  }
+
+  #buttons {
+    justify-content: center;
+    size: 200px;
+  }
+
+  img {
     width: 70%;
-   }
+    margin-left: 85px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -65,7 +73,22 @@
     margin-left: 4px;
     margin-right: 4px;
   }
-  
+
+  .hero {
+    text-align: center;
+    font-size: small;
+  }
+
+  #buttons {
+    justify-content: center;
+    size: 200px;
+  }
+
+  img {
+    width: 70%;
+    margin-left: 50px;
+  }
+
 }
 
 @media (max-width: 575px) {
@@ -85,7 +108,6 @@
     margin-bottom: 10px;
     margin-left: 4px;
     margin-right: 4px;
-
   }
 
   .hero {
@@ -124,25 +146,39 @@
 }
 
 
-.utube:hover svg{
+.utube:hover svg {
   color: #47b2e4;
   transition: 0.5s;
 }
 
-.clogo{
+.clogo {
   padding: 12px 0px;
   text-align: center;
 }
 
-.clogo img{
-max-width: 45%;
-display: inline-block;
-transition: all 0.4s ease-in-out;
-filter: grayscale(100);
-padding: 15px 0;
+.clogo img {
+  max-width: 45%;
+  transition: all 0.4s ease-in-out;
+  filter: grayscale(100);
+  padding: 15px 0;
 }
 
-.clogo img:hover{
+.clogo img:hover {
   filter: none;
   transform: scale(1.1);
+}
+
+#header {
+  transition: all 0.1s;
+  z-index: 997;
+  padding: 15px 0;
+}
+
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: rgba(40, 58, 90, 0.9);
+}
+
+.aboutus{
+  color: rgb(55, 81, 126);
 }

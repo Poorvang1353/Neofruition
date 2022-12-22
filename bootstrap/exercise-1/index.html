@@ -10,29 +10,29 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aasha</title>
 </head>
 
 <body>
-    <div style="background-color: rgb(55, 81, 126); " class="container-fluid">
-        <header>
+    <div style="background-color: rgb(55, 81, 126); " class="container-fluid mb-sm-3">
+        <header id="header" class="sticky-lg-top">
             <nav id="navbar" class="navbar navbar-expand-lg justify-content-end ">
                 <div class="container-fluid row">
-                    <!-- <div class=""> -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-2">
                         <h2 id="logo" class=" text-white  ps-lg-5 ps-3">ARSHA</h2>
                         <button class="navbar-toggler position-absolute top-0 end-0 " type="button"
                             data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon position-absolute top-0 end-0 "></span>
+                            <span class="navbar-toggler-icon "></span>
                         </button>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 col-md-10A">
                         <div class="navigation collapse navbar-collapse rounded-2" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active px-lg-3 ms-lg-5 px-3" aria-current="page"
+                            <ul class="navbar-nav ms-md-0">
+                                <li class="nav-item ">
+                                    <a class="nav-link active px-lg-3 ms-lg-5 px-3 " aria-current="page"
                                         href="#home">Home</a>
                                 </li>
                                 <li class="nav-item">
@@ -71,6 +71,8 @@
                     </div>
                 </div>
             </nav>
+
+       
         </header>
 
         <Section class="container mt-5">
@@ -83,7 +85,7 @@
 
                         <h5>We are team of talented designers making websites <br> with Bootstrap</h5>
                         <br><br>
-                        <div id="buttons" class="d-flex">
+                        <div id="buttons" class="d-flex mb-3">
                             <a href="#" class="btn btn-primary rounded-pill text-light btn-lg h-50">Get
                                 Started</a>
 
@@ -98,37 +100,50 @@
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">
-                    <img style="width: 97%;" src="hero-img.png" alt="loading">
+                    <img src="hero-img.png" alt="loading">
                 </div>
             </div>
         </Section>
     </div>
 
     <!-- client Section  -->
-    <!-- <section> -->
-        <!-- <div class="container-fluid row clogo "> -->
-            <!-- <div class=""> -->
-            <!-- <div class="col-lg-2 align-items-center justify-content-center ps-5">
+    <section>
+        <div class="container-fluid row clogo">
+            <div class="col-lg-2 col-6 align-items-center justify-content-center ps-lg-5">
                 <img src="client-1.png" class="img-fluid" alt="">
             </div>
-            <div class="col-lg-2 align-items-center justify-content-center">
+            <div class="col-lg-2 col-6 align-items-center justify-content-center">
                 <img src="client-2.png" class="img-fluid" alt="">
             </div>
-            <div class="col-lg-2 align-items-center justify-content-center">
+            <div class="col-lg-2 col-6 align-items-center justify-content-center">
                 <img src="client-3.png" class="img-fluid" alt="">
             </div>
-            <div class="col-lg-2 align-items-center justify-content-center">
+            <div class="col-lg-2 col-6 align-items-center justify-content-center">
                 <img src="client-4.png" class="img-fluid" alt="">
             </div>
-            <div class="col-lg-2 align-items-center justify-content-center">
+            <div class="col-lg-2 col-6 align-items-center justify-content-center">
                 <img src="client-5.png" class="img-fluid" alt="">
             </div>
-            <div class="col-lg-2 align-items-center justify-content-center">
+            <div class="col-lg-2 col-6 align-items-center justify-content-center">
                 <img src="client-6.png" class="img-fluid" alt="">
-            </div> -->
-            <!-- </div> -->
-        <!-- </div>
-    </section> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About us -->
+    <section class="container-fluid">
+        <div>
+            <h2 class="fw-bolder text-center aboutus">ABOUT US</h2>
+            <hr style="width: 10%; margin-left: 552px; margin-top: 0%;">
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 ps-lg-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui illo quis eaque dolorum excepturi eveniet architecto blanditiis placeat fuga!</div>
+            <div class="col-lg-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore fugit enim voluptate
+                provident optio dolorem, quasi necessitatibus eum nostrum temporibus quam quia similique dolorum harum
+                officiis aliquid numquam alias. Esse porro vel nemo maxime!</div>
+        </div>
+    </section>
 </body>
 
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Mobile No.</th>
+            <th>Email Id</th>
+            <th>Action</th>
+        </thead>
+        <tr>
+            <form onsubmit="event.preventDefault();onFormSubmit();">
+                <td>
+                    <div>
+                       <label class="validation-error hide" id="fullNameValidationError"></label>
+                        <input type="text" name="Name" id="Name">
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <input type="number" name="mobileNo" id="mobileNo">
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <input type="email" name="emailId" id="emailId">
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <input type="submit" value="ADD">
+                    </div>
+                </td>
+            </form>
+            
+        </tr>
+    </table>
+    <br>
+    <table class="list" id="employeeList">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Mobile No.</th>
+                <th>Email Id</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
