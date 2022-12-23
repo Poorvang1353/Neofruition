@@ -29,7 +29,7 @@ function insertNewRecord(data) {
     cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.emailId;
     cell4 = newRow.insertCell(3);
-    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+    cell4.innerHTML = `<a onClick="onEdit(this), change()">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
 }
 
@@ -63,13 +63,139 @@ function onDelete(td) {
 
 function validate() {
     isValid = true;
-    if (document.getElementById("Name").value == "") {
+
+    // if (document.getElementById("Name").value == "") {
+    //     isValid = false;
+    //     document.getElementById("fullNameValidationError").classList.remove("hide");
+    // } else {
+    //     isValid = true;
+    //     if (!document.getElementById("fullNameValidationError").classList.contains("hide"))
+    //         document.getElementById("fullNameValidationError").classList.add("hide");
+    // }
+
+    if (mobileNo.value.length != 10){
         isValid = false;
-        document.getElementById("fullNameValidationError").classList.remove("hide");
     } else {
         isValid = true;
-        if (!document.getElementById("fullNameValidationError").classList.contains("hide"))
-            document.getElementById("fullNameValidationError").classList.add("hide");
+
     }
     return isValid;
 }
+
+function change() {
+    document.getElementById("mybutton").value = "UPDATE";
+}
+
+function change2() {
+    document.getElementById("mybutton").value = "ADD";
+}
+
+
+var $ConNoRegEx = /^([0-9]{10})$/;
+var $FNameLNameRegEx = /^([a-zA-Z]{2,20})$/;
+var $EmailIdRegEx = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,8}\b$/i;
+$(document).ready(function () {
+
+    $("#Name").blur(function () {
+        $("#TxtNameValidation").empty();
+        if ($(this).val() == "" || $(this).val() == null) {
+            $("#TxtNameValidation").html("(*) Firstname required..!!");
+        }
+        else {
+            if (!$(this).val().match($FNameLNameRegEx)) {
+                $("#TxtNameValidation").html("(*) Invalid firstname..!!");
+            }
+        }
+    });
+
+    $("#Name").keypress(function (e) {
+        var flag = false;
+        $("#TxtNameValidation").empty();
+        ((e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 122))
+            ? flag = true
+            : (flag = false, $("#TxtNameValidation").html("Invalid keypress..!!"))
+        return flag;
+    });
+
+    $("#mobileNo").blur(function () {
+        $("#TxtContactNoValidation").empty();
+        if ($(this).val() == "" || $(this).val() == null) {
+            $("#TxtContactNoValidation").html("(*) Contact no. required..!!");
+        }
+        else {
+            if (!$(this).val().match($ConNoRegEx)) {
+                $("#TxtContactNoValidation").html("(*) Invalid contact no..!!");
+            }
+        }
+    });
+
+    $("#mobileNo").keypress(function (e) {
+        var flag = false;
+        $("#TxtContactNoValidation").empty();
+        (e.which >= 48 && e.which <= 57)
+            ? flag = true
+            : (flag = false, $("#TxtContactNoValidation").html("Invalid keypress..!!"))
+        return flag;
+    });
+
+    $("#emailId").blur(function () {
+        $("#TxtEmailIdValidation").empty();
+        if ($(this).val() == "" || $(this).val() == null) {
+            $("#TxtEmailIdValidation").html("(*) Email id required..!!");
+        }
+        else {
+            if (!$(this).val().match($EmailIdRegEx)) {
+                $("#TxtEmailIdValidation").html("(*) Invalid email id..!!");
+            }
+        }
+    });
+});
+
+
+$("#mybutton").click(function () {
+    $("#TxtNameValidation").empty();
+    if ($("#Name").val() == "" || $("#Name").val() == null) {
+        $("#TxtNameValidation").html("(*) Firstname required..!!");
+        TxtNameFlag = false;
+    }
+    else {
+        if (!$("#Name").val().match($FNameLNameRegEx)) {
+            $("#TxtNameValidation").html("(*) Invalid firstname..!!");
+            TxtNameFlag = false;
+        }
+        else {
+            TxtNameFlag = true;
+        }
+    }
+
+    $("#TxtContactNoValidation").empty();
+    if ($("#mobileNo").val() == "" || $("#mobileNo").val() == null) {
+        $("#TxtContactNoValidation").html("(*) Contact no. required..!!");
+        TxtContactNoFlag = false;
+    }
+    else {
+        if (!$("#mobileNo").val().match($ConNoRegEx)) {
+            $("#TxtContactNoValidation").html("(*) Invalid contact no..!!");
+            TxtContactNoFlag = false;
+        }
+        else {
+            TxtContactNoFlag = true;
+        }
+    }
+
+
+    $("#TxtEmailIdValidation").empty();
+    if ($("#emailId").val() == "" || $("#emailId").val() == null) {
+        $("#TxtEmailIdValidation").html("(*) Email id required..!!");
+        TxtEmailIdFlag = false;
+    }
+    else {
+        if (!$("#emailId").val().match($EmailIdRegEx)) {
+            $("#TxtEmailIdValidation").html("(*) Invalid email id..!!");
+            TxtEmailIdFlag = false;
+        }
+        else {
+            TxtEmailIdFlag = true;
+        }
+    }
+});

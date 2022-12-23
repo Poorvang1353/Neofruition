@@ -1,0 +1,24 @@
+table{
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+
+input[type=text], input[type=number], input[type=email] {
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+input[type=submit]{
+    cursor: pointer;
+}
+
+a{
+    cursor: pointer;
+    color: blueviolet;
+}

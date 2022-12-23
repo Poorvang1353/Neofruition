@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Crude operation</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
-
     <script src="script.js"></script>
 </head>
 
@@ -21,30 +19,28 @@
             <th>Action</th>
         </thead>
         <tr>
-            <form onsubmit="event.preventDefault();onFormSubmit();" method="post" name="myform">
+            <form onsubmit="event.preventDefault();onFormSubmit();" >
                 <td>
                     <div>
                         <label class="validation-error hide" id="fullNameValidationError"></label>
-                        <input type="text" name="Name" id="Name" required ><br>
-                        <small id="TxtNameValidation"></small>
-
+                        <input type="text" name="Name" id="Name">
                     </div>
                 </td>
                 <td>
                     <div>
-                        <input maxlength="10" type="number" name="mobileNo" id="mobileNo" required><br>
-                        <small id="TxtContactNoValidation"></small>
+                        <input type="number" name="mobileNo" id="mobileNo">
+                        
                     </div>
                 </td>
                 <td>
                     <div>
-                        <input type="email" name="emailId" id="emailId" required> <br>
-                        <small id="TxtEmailIdValidation"></small>
+                        <input type="email" name="emailId" id="emailId">
                     </div>
                 </td>
                 <td>
                     <div>
-                        <input onclick="change2()" type="submit" value="ADD" id="mybutton">
+                        <input type="submit" value="ADD">
+        
                     </div>
                 </td>
             </form>
