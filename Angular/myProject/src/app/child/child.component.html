@@ -1,0 +1,6 @@
+<p class="text-center fw-bolder fs-2">{{uname}}</p>
+<div class="container-fluid ms-5">
+    <label for="child-input">Add a child: </label>
+    <input type="text" id="child-input" #newChild>
+    <button (click)="addNewchild(newChild.value); newChild.value=''" class="ms-2">ADD Parent to child</button>
+</div>

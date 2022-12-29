@@ -64,15 +64,6 @@ function onDelete(td) {
 function validate() {
     isValid = true;
 
-    // if (document.getElementById("Name").value == "") {
-    //     isValid = false;
-    //     document.getElementById("fullNameValidationError").classList.remove("hide");
-    // } else {
-    //     isValid = true;
-    //     if (!document.getElementById("fullNameValidationError").classList.contains("hide"))
-    //         document.getElementById("fullNameValidationError").classList.add("hide");
-    // }
-
     if (mobileNo.value.length != 10){
         isValid = false;
     } else {
@@ -87,10 +78,9 @@ function change() {
 }
 
 function change2() {
-    
+
     document.getElementById("mybutton").value = "ADD";
 }
-
 
 var $ConNoRegEx = /^([0-9]{10})$/;
 var $FNameLNameRegEx = /^([a-zA-Z]{2,20})$/;
@@ -152,7 +142,6 @@ $(document).ready(function () {
     });
 });
 
-
 $("#mybutton").click(function () {
     $("#TxtNameValidation").empty();
     if ($("#Name").val() == "" || $("#Name").val() == null) {
@@ -183,7 +172,6 @@ $("#mybutton").click(function () {
             TxtContactNoFlag = true;
         }
     }
-
 
     $("#TxtEmailIdValidation").empty();
     if ($("#emailId").val() == "" || $("#emailId").val() == null) {
