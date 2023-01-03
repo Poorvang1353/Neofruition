@@ -1,0 +1,36 @@
+<h1>String in uppercase: {{title | uppercase}}</h1>
+<h1>slice: {{title | slice : 3 : 8 | uppercase}}</h1>
+<h1>Date with country: {{today }}</h1>
+<h1>Only Date: {{today | date}}</h1>
+<h1>Full Date: {{today | date : 'fullDate'}}</h1>
+<h1>Using a function: {{capString(title)}}</h1>
+<h1>json file: {{user | json}}</h1>
+<h1>Floting Numbers: {{2000.300 | number : '2.2'}}</h1>
+<h1>Currency: {{20 | currency : 'USD'}}</h1>
+<h1>{{"Hello! how are you.."}}</h1>
+<br><br>
+<h1>Using Custom pipe: {{20 | usdInr : 4}}</h1>
+<br><br><br>
+
+<h1>Template Driven Form</h1>
+<form #loginform = "ngForm" (ngSubmit)="userLogin(loginform.value)">
+  <input type="text" placeholder="Enter name" name="name" ngModel>
+  <br>
+  <br>
+  <input type="password" placeholder="Enter password" name="password" ngModel>
+  <br>
+  <br>
+  <button>Login</button>
+</form>
+<br><br>
+
+<h1>Reactive Form with Validation</h1>
+<form [formGroup] = "loginForm" (ngSubmit)="loginUser()">
+  <input type="text" placeholder="Enter name" name="users" formControlName="users">
+  <br>
+  <span style="color: red;" *ngIf="users && users.invalid && users.touched">This field is not valid!</span><br>
+  <input type="password" placeholder="Enter password" name="password" formControlName="password">
+  <br>
+  <span style="color: red;" *ngIf="password && password.invalid && password.touched">This field is not valid!</span><br>
+  <button [disabled]="loginForm.invalid">Login</button>
+</form>

@@ -78,7 +78,6 @@ function change() {
 }
 
 function change2() {
-
     document.getElementById("mybutton").value = "ADD";
 }
 

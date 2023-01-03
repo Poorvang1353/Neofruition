@@ -12,3 +12,4 @@ export class ApiUserService {
     return this._http.get('https://reqres.in/api/users?per_page=12');
   }
 }
+

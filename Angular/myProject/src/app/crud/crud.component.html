@@ -2,19 +2,20 @@
 
 <h3 class="fw-bolder">Crud Operation</h3>
 
-<input type="text" placeholder="Enter any Text" [(ngModel)]="studentName" >
-<input type="button" *ngIf="selectedStudent===''" (click)="addStudent()" value="Add Student" class="ms-2 btn btn-primary mb-2">
-<input type="button" *ngIf="selectedStudent!==''" (click)="editStudent()" value="Edit Student" class="ms-2 btn btn-primary">
+<input type="text" placeholder="Enter any Text" [(ngModel)]="studentName">
+<input type="button" *ngIf="selectedStudent===''" (click)="addStudent()" value="Add Student"
+    class="ms-2 btn btn-primary mb-2" [disabled]="!studentName">
+<input type="button" *ngIf="selectedStudent!==''" (click)="editStudent()" value="Edit Student"
+    class="ms-2 btn btn-primary">
 <table class="table table-bordered">
 
     <tr *ngFor="let s of students; let i =index">
         <td>{{s}}</td>
         <td><button class="btn btn-warning rounded" (click)="selectStudent(i)">Edit</button></td>
-        <td><button class="btn btn-danger rounded text-dark"  (click)="deleteStudent(i)">Delete</button></td>
-    </tr> 
+        <td><button class="btn btn-danger rounded text-dark" (click)="deleteStudent(i)">Delete</button></td>
+    </tr>
 </table>
 
 <br>
 <br>
 <p></p>
-

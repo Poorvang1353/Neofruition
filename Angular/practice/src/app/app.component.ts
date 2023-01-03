@@ -2,18 +2,18 @@ import { Component } from '@angular/core';
 import { findIndex } from 'rxjs';
 
 @Component({
-  selector: 'app-crud',
-  templateUrl: './crud.component.html',
-  styleUrls: ['./crud.component.css']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class CrudComponent {
+export class AppComponent {
+  title = 'practice';
   studentName = '';
-  students:any = [];
+  students: any = [];
   selectedStudent: any = "";
   setName(e: any) {
-    this.studentName = e.target.value;
+    this.studentName = e.target.value
   }
-
   addStudent() {
     this.students.push(this.studentName);
     this.studentName = '';
