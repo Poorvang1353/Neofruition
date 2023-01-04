@@ -1,17 +1,3 @@
-<div class="ms-3">
-    <h2>Static Crud Operation</h2>
-    <input type="text" placeholder="Enter Name" [(ngModel)]="studentName">
-    <input type="button" value="Add Name" *ngIf="selectedStudent===''" (click)="addStudent()"
-        class="ms-2 btn btn-primary mb-2" [disabled]="!studentName">
-    <input type="button" value="Edit Name" *ngIf="selectedStudent!==''" (click)="editStudent()"
-        class="ms-2 btn btn-primary mb-2">
-    <table class="table table-bordered">
-        <tr *ngFor="let s of students; let i = index">
-            <td>{{s}}</td>
-            <td><button class="btn btn-warning rounded text-dark" (click)="selectStudent(i)">Edit</button></td>
-            <td><button class="btn btn-danger rounded text-dark" (click)="deleteStudent(i)">Delete</button></td>
-        </tr>
-    </table>
-</div>
 
+<app-child [className]="uname"></app-child>
 <router-outlet></router-outlet>
