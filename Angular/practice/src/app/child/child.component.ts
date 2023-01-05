@@ -10,5 +10,4 @@ export class ChildComponent {
 
   @Input() className! : string;
 
-  
 }

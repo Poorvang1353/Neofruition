@@ -19,7 +19,6 @@ export class HeadersInterceptor implements HttpInterceptor {
         name,
       }
     })
-    // console.log(request);
     return next.handle(User);
   }
 }

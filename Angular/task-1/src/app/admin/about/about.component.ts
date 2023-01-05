@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-  numbers:Array<any> = [];
-   constructor() {
-      this.numbers = Array.from({length:10},(v,k)=>k+1);
-   }
+
 }
