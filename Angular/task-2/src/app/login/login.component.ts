@@ -18,14 +18,17 @@ export class LoginComponent {
 
   getUserFormData(data: any) {
     this.api.saveUsers(data).subscribe((result) => {
-
-      if (result.status == 200) {
-        this.router.navigateByUrl('/dashboard');
+      localStorage.setItem("token",result.accessToken);
+      if (result.status === 200) {
+        this.router.navigate(['dashboard']);
+        console.log(result.status);
+        
       }
-      else {
+      else{
         console.log("login failed ");
         this.toastrService.error("login failed");
       }
+    
     }
     );
 

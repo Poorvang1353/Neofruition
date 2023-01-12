@@ -13,7 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DeshboardModule } from './deshboard/deshboard.module';
-
+import { BnNgIdleModule } from 'bn-ng-idle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,10 +28,11 @@ import { DeshboardModule } from './deshboard/deshboard.module';
     FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    
     
   ],
-  providers: [
+  providers: [BnNgIdleModule,
     { provide : HTTP_INTERCEPTORS, useClass:LoggingInterceptor, multi:true}
   ],
   bootstrap: [AppComponent]
