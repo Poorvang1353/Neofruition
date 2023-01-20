@@ -23,10 +23,8 @@
     "angular-google-charts": "^2.2.3",
     "bn-ng-idle": "^2.0.4",
     "bootstrap": "^5.2.3",
-<<<<<<< HEAD
     "bootstrap4-toggle": "^3.6.1",
-=======
->>>>>>> 73e6e9e140c62b49d32d6130451a36dec562e160
+
     "ngx-toastr": "^16.0.2",
     "rxjs": "~7.5.0",
     "toastr": "^2.1.4",

@@ -11,10 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 
 export class LoginComponent {
-<<<<<<< HEAD
 
-=======
->>>>>>> 73e6e9e140c62b49d32d6130451a36dec562e160
   users: any;
   constructor(private api: ApiLoginService,
     public toastrService: ToastrService, private router: Router) {
@@ -22,7 +19,6 @@ export class LoginComponent {
 
   getUserFormData(data: any) {
     this.api.saveUsers(data).subscribe((result) => {
-<<<<<<< HEAD
 
       localStorage.setItem("token", result.accessToken);
       if (result.status === 200) {
@@ -44,22 +40,7 @@ export class LoginComponent {
 
     );
     
-=======
-      localStorage.setItem("token",result.accessToken);
-      if (result.status === 200) {
-        this.router.navigate(['dashboard']);
-        console.log(result.status);
-        
-      }
-      else{
-        console.log("login failed ");
-        this.toastrService.error("login failed");
-      }
-    
-    }
-    );
 
->>>>>>> 73e6e9e140c62b49d32d6130451a36dec562e160
   }
 
 

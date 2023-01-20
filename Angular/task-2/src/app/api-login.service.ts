@@ -16,10 +16,7 @@ export class ApiLoginService {
   saveUsers(data: any): Observable<any> {
     return this.http.post(this.url, data);
   }
-<<<<<<< HEAD
   IsLoggedIn(){
     return localStorage.getItem('token')!=null;
   }
-=======
->>>>>>> 73e6e9e140c62b49d32d6130451a36dec562e160
 }
