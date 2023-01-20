@@ -15,4 +15,3 @@ export class AppComponent {
     this.child.push(newChild);
   }
 }
-

@@ -10,7 +10,6 @@
         </div>
     </div>
 </div>
-
 <app-child [uname]="username" (newChild)="addChild($event)"></app-child>
 <ul class="ms-5">
     <li *ngFor="let c of child">{{c}}</li>
