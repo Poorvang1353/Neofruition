@@ -8,5 +8,9 @@ import { findIndex } from 'rxjs';
 })
 export class AppComponent {
   title = 'practice';
-  uname = 'My name is Poorvang'
+  uname = 'My name is Poorvang';
+  username: any[] = [];
+  getname(item: string) {
+    this.username.push({ id: this.username, name: item });
+  }
 }
