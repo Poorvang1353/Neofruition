@@ -8,10 +8,10 @@ import { ApiUserService } from '../api-user.service';
 })
 
 export class UserComponent implements OnInit {
-  users:any = [];
+
   constructor(private _api: ApiUserService) { }
 
   ngOnInit() {
-    this._api.getAllUsers().subscribe((Response: any) => this.users = Response.data);
+    this._api.getAllUsers().subscribe();
   }
 }
