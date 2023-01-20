@@ -54,6 +54,9 @@ export class livedashboardComponent implements OnInit {
     this.router.navigateByUrl('')
   }
 
+  register(){
+    this.router.navigateByUrl('registration');
+  }
   board() {
     this.router.navigate(['casedashboard']);
   }
