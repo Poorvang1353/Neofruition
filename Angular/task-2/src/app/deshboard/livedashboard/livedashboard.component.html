@@ -1,0 +1,20 @@
+<div class="container row mt-3">
+    <div class="col-9">
+        <h2 class="fw-bolder ms-4">Live Dashboard</h2>
+    </div>
+
+    <div class="col-3">
+        <h4 class="btn btn-primary rounded" (click)="board()">casedashboard</h4>
+    </div>
+</div>
+<br><br>
+<h5 class="d-flex align-items-center pb-1 big-stat-title ms-5"><span class="me-2"><svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill"
+            viewBox="0 0 20 21">
+            <circle cx="8" cy="8" r="8" />
+        </svg></span>
+    <span class="widgtitle" style="color:#2e4d82 ;">New Subscription vs Renewal</span>
+</h5>
+<div id="divPiechart"></div>
+<button class="btn btn-danger ms-5" (click)="logout()">logout</button>
+<router-outlet></router-outlet>
