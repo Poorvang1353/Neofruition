@@ -14,7 +14,7 @@ export class livedashboardComponent implements OnInit {
   ngOnInit(): void {
     google.charts.load('current', { packages: ['corechart'] });
     google.charts.setOnLoadCallback(this.drawChart);
-    this.bnIdle.startWatching(30).subscribe((isTimeOut: boolean) => {
+    this.bnIdle.startWatching(50).subscribe((isTimeOut: boolean) => {
       if (isTimeOut) {
         console.log('session expired');
         this.router.navigate(['']);
@@ -54,7 +54,7 @@ export class livedashboardComponent implements OnInit {
     this.router.navigateByUrl('')
   }
 
-  register(){
+  register() {
     this.router.navigateByUrl('registration');
   }
   board() {
