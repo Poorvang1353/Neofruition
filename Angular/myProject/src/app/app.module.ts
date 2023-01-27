@@ -16,7 +16,6 @@ import { ChildComponent } from './child/child.component';
 import { LazyloadingComponent } from './lazyloading/lazyloading.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
