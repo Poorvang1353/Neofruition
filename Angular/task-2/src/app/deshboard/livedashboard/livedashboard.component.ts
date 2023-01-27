@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, resolveForwardRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { GoogleChartsModule } from 'angular-google-charts';
+// import {GoogleCharts} from 'google-charts';
 import { BnNgIdleService } from 'bn-ng-idle';
+import { DynamicChartService } from './dynamic-chart.service';
 
 declare var google: any;
 @Component({
@@ -9,13 +12,21 @@ declare var google: any;
   styleUrls: ['./livedashboard.component.css']
 })
 export class livedashboardComponent implements OnInit {
-  constructor(private router: Router, private bnIdle: BnNgIdleService) { }
+  constructor(private router: Router, private bnIdle: BnNgIdleService, private getchart: DynamicChartService) { }
+  // data:number[];
+  renewal: any;
+  subscription: any;
+  ngOnInit() {
+    this.getchart.getallchart().subscribe((response: any) => {
+      if(response && response.dataList){
+        this.drawchart(response.dataList);
+      }
+    })
 
-  ngOnInit(): void {
     google.charts.load('current', { packages: ['corechart'] });
-    google.charts.setOnLoadCallback(this.drawChart);
+    google.charts.setOnLoadCallback(this.drawchart);
 
-    google.charts.load('current', {'packages':['corechart']});
+    google.charts.load('current', { 'packages': ['corechart'] });
     google.charts.setOnLoadCallback(this.drawVisualization);
 
     this.bnIdle.startWatching(50).subscribe((isTimeOut: boolean) => {
@@ -26,12 +37,19 @@ export class livedashboardComponent implements OnInit {
       }
     })
   }
-  drawChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['Year', 'Subscription', 'Renewal'],
-      ['January-2023', 18, 51],
 
-    ]);
+  getFormmatedDate(date: string | number | Date){
+    const months = ["january", "February","March", "April","June"];
+    const dt = new Date(date);
+    return months[dt.getMonth()] + "-" + dt.getFullYear();
+  }
+
+  drawchart(dataList: any):void {
+    var chartMap = [['Month','Subscription','Renewal']];
+    for(let data of dataList){
+      chartMap.push([this.getFormmatedDate(data.date),data.newSubsCount,data.renewalSubsCount]);
+    }
+    var data = google.visualization.arrayToDataTable(chartMap);
 
     var options = {
       legend: { position: 'top' },
@@ -51,25 +69,24 @@ export class livedashboardComponent implements OnInit {
     };
     var chart = new google.visualization.ColumnChart(document.getElementById('divPiechart'));
     chart.draw(data, options);
-    
   }
 
   drawVisualization() {
     // Some raw data (not necessarily accurate)
     var data = google.visualization.arrayToDataTable([
       ['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],
-      ['2004/05',  165,      938,         522,             998,           450,      614.6],
-      ['2005/06',  135,      1120,        599,             1268,          288,      682],
-      ['2006/07',  157,      1167,        587,             807,           397,      623],
-      ['2007/08',  139,      1110,        615,             968,           215,      609.4],
-      ['2008/09',  136,      691,         629,             1026,          366,      569.6]
+      ['2004/05', 165, 938, 522, 998, 450, 614.6],
+      ['2005/06', 135, 1120, 599, 1268, 288, 682],
+      ['2006/07', 157, 1167, 587, 807, 397, 623],
+      ['2007/08', 139, 1110, 615, 968, 215, 609.4],
+      ['2008/09', 136, 691, 629, 1026, 366, 569.6]
     ]);
 
     var options = {
-      title : 'Monthly Production by Country',
-      hAxis: {title: 'Month'},
+      title: 'Monthly Production by Country',
+      hAxis: { title: 'Month' },
       seriesType: 'bars',
-      series: {5: {type: 'line'}},
+      series: { 5: { type: 'line' } },
       width: 500,
       height: 200,
     };

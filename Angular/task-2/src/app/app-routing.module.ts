@@ -13,14 +13,7 @@ const routes: Routes = [
   { path: 'casedashboard', component: CasedeshboardComponent,canActivate:[AuthGuard] },
   { path: 'registration', component: RegistrationFormComponent,canActivate:[AuthGuard] },
 ]
-// import { DashboardComponent } from './deshboard/dashboard/dashboard.component';
-// import { DeshboardModule } from './deshboard/deshboard.module';
-// import { LoginComponent } from './login/login.component';
 
-// const routes: Routes = [
-//   {path: '', component:LoginComponent},
-//   {path : 'dashboard',component:DashboardComponent},
-// ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

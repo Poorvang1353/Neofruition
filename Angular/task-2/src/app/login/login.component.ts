@@ -25,6 +25,7 @@ export class LoginComponent {
         this.router.navigate(['livedashboard']);
         console.log(result.status);
       }
+      
       else {
         console.log("login failed ");
         this.toastrService.error("login failed");

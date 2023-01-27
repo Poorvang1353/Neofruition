@@ -19,4 +19,7 @@ export class ApiLoginService {
   IsLoggedIn(){
     return localStorage.getItem('token')!=null;
   }
+  gettoken(){
+    return localStorage.getItem('token')||''
+  }
 }
