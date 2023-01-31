@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { findIndex } from 'rxjs';
+import * as moment from 'moment';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -13,4 +14,11 @@ export class AppComponent {
   getname(item: string) {
     this.username.push({ id: this.username, name: item });
   }
+
+  today: any = moment([2023,1,13]);
+  earlyday:any=moment();
+
+  thisday:any = moment('2010-10-20').isBefore('2010-09-30');
+
+  
 }

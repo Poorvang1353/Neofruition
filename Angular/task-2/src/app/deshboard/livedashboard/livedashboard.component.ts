@@ -51,7 +51,6 @@ export class livedashboardComponent implements OnInit {
     var options = {
       legend: { position: 'top' },
       chart: {
-
         title: 'Company Performance',
         subtitle: 'Sales, Expenses, and Profit: 2014-2017',
       },
@@ -74,9 +73,9 @@ export class livedashboardComponent implements OnInit {
       ['feb', 7000, '#b87333'],            // RGB value
       ['march', 10000, 'silver'],            // English color name
       ['april', 10000, 'gold'],
-
       ['may', 39000, 'color: #e5e4e2; stroke-width: 8; stroke-opacity: 0.6']
     ]);
+
     let el: any = document.getElementById("divColoumnChart");
     var chart = new google.visualization.ColumnChart(el)
     var options: any = {
@@ -85,11 +84,8 @@ export class livedashboardComponent implements OnInit {
       width: 500,
       height: 200,
       bar: { groupWidth: "50%" },
-
     };
     chart.draw(data, options);
-
-
   }
 
   chart: any;
@@ -101,6 +97,7 @@ export class livedashboardComponent implements OnInit {
   register() {
     this.router.navigateByUrl('registration');
   }
+  
   board() {
     this.router.navigate(['casedashboard']);
   }

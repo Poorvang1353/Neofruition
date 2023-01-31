@@ -8,11 +8,15 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChildComponent } from './child/child.component';
+import { BaseComponent } from './base/base.component';
+import { ChildBComponent } from './child-b/child-b.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponent,
+    // BaseComponent,
+    ChildBComponent,
 
   ],
   imports: [
