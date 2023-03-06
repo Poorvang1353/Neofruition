@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import TextArea from './components/TextArea';
 import Carousel from './components/Carousel';
 import News from './components/News';
+import Api from './components/Api';
 import {
   BrowserRouter,
   Routes,
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Carousel />}></Route>
             <Route path="about" element={<TextArea />}></Route>
             <Route path="news" element={<News />}></Route>
+            <Route path="api" element={<Api />}></Route>
           </Routes>
         </div>
       </BrowserRouter>
