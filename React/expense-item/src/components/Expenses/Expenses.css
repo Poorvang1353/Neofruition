@@ -1,6 +1,7 @@
 .expenses {
   padding: 1rem;
-  background-color: rgb(31, 31, 31);
+  /* background-color: rgba(99, 97, 97, 0.272); */
+  box-shadow: 5px;
   margin: 2rem auto;
   width: 50rem;
   max-width: 95%;
