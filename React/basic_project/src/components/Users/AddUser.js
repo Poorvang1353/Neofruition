@@ -17,9 +17,9 @@ export default function AddUser(props) {
     setEnteredAge(event.target.value);
   }
 
-	function errorHandler(){
-		setError(null);
-	}
+  function errorHandler() {
+    setError(null);
+  }
 
   function addUserHandler(event) {
     event.preventDefault();
@@ -44,7 +44,13 @@ export default function AddUser(props) {
 
   return (
     <div>
-      {error && <ErrorModel titled={error.titled} message={error.message} onConfirm={errorHandler} />}
+      {error && (
+        <ErrorModel
+          titled={error.titled}
+          message={error.message}
+          onConfirm={errorHandler}
+        />
+      )}
       <Card className={classes.input}>
         <form onSubmit={addUserHandler}>
           <label htmlFor="username">Username</label>
