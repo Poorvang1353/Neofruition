@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
@@ -14,7 +13,7 @@ const Expenses = (props) => {
 
   const filterdExpenses = props.items.filter((expense) => {
     return expense.date.getFullYear().toString() === filteredYear;
-  });
+  })
 
   let expenseContent = <p>No Expenses Found.</p>;
 
